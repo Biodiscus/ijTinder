@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title></title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/> <!--320-->
+
+        <script src="lib/jquery.min.js"></script>
+        <script src="lib/jquery.transform2d.js"></script>
+        <script src="js/jquery.ijTinder.js"></script>
+        <link rel="stylesheet" href="css/style.css"/>
+    </head>
+    <body>
+        <div class="pane">
+            <ul>
+                <li>
+                    <img src="https://placekitten.com/g/200/300">
+                </li>
+                <li>
+                    <img src="https://placekitten.com/g/199/300">
+                </li>
+                <li>
+                    <img src="https://placekitten.com/g/199/300">
+                </li>
+                <li>
+                    <img src="https://placekitten.com/g/200/300">
+                </li>
+                <li>
+                    <img src="https://placekitten.com/g/199/300">
+                </li>
+                <li>
+                    <img src="https://placekitten.com/g/199/300">
+                </li>
+                <li>
+                    <img src="https://placekitten.com/g/200/300">
+                </li>
+                <li>
+                    <img src="https://placekitten.com/g/199/300">
+                </li>
+                <li>
+                    <img src="https://placekitten.com/g/199/300">
+                </li>
+            </ul>
+        </div>
+
+        <script>
+            $(".pane").ijTinder({
+                like: function() {
+                    console.log("like");
+                },
+                dislike: function() {
+                    console.log("dislike");
+                },
+                remove: function() {
+                    $(this).remove();
+                }
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.pane {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.pane ul {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.pane li {
+    margin-left: 20px;
+
+    display: block;
+    position: absolute;
+
+    z-index: 2;
+    text-align: center;
+
+    top: 0;
+    left: 0;
+
+    width: 200px;
+    height: 300px;
+
+    transform: translate(0px, 0px);
+}
+
+.pane li:last-child {
+    position: relative;
+    margin: 0 0 0 -20px;
+}
