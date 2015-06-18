@@ -33,6 +33,7 @@
     Plugin.prototype = {
         init: function(element) {
             target = $(element).find("li");
+            console.log(target);
 
             parent = target.parent();
             parent_height = parent.height();
@@ -62,7 +63,7 @@
             if(self.settings.remove) {
                 self.settings.remove.call(obj);
             } else {
-                target.remove();
+                obj.remove();
             }
         },
         touchEvent: function(e) { // Create a fake Event object, send that object to the mouseEvent function
