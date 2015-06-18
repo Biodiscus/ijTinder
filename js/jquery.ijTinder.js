@@ -33,7 +33,6 @@
     Plugin.prototype = {
         init: function(element) {
             target = $(element).find("li");
-            console.log(target);
 
             parent = target.parent();
             parent_height = parent.height();
@@ -48,14 +47,14 @@
             target.on("mousedown mouseup mousemove", this.mouseEvent);
             target.on("touchstart touchend touchmove", this.touchEvent);
         },
-        like: function() {
+        like: function(obj) {
             if(self.settings.like) {
-                self.settings.like.call();
+                self.settings.like.call(obj);
             }
         },
-        dislike: function() {
+        dislike: function(obj) {
             if(self.settings.dislike) {
-                self.settings.dislike.call();
+                self.settings.dislike.call(obj);
             }
         },
         remove: function(obj) {
@@ -133,9 +132,9 @@
                         var _sign_x = Math.sign(_dif_x);
 
                         if(_sign_x === 1) {
-                            self.like();
+                            self.like(_self);
                         } else {
-                            self.dislike();
+                            self.dislike(_self);
                         }
 
                         self.remove(_self);
